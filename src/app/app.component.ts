@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '../assets/app-email-element';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'elements-holder';
+  email1 = '';
+  email2 = '';
+  constructor() { }
+
+  show() {
+    console.log('this', this.email1, this.email2);
+  }
+
 }
