@@ -1,6 +1,11 @@
 <div class="container mt-4">
-  <app-email-element ngDefaultControl [(ngModel)]="email1" placeholder="Type here" label="Email 1"></app-email-element>
-  <app-email-element ngDefaultControl [(ngModel)]="email2" placeholder="Type here" label="Email 2"></app-email-element>
-  <br>
-  <button type="button" (click)="show()" class="btn btn-secondary">Show values</button>
+	<form>
+	  <input  [(ngModel)]="name" placeholder="Your name" ngDefaultControl class="form-control" [ngModelOptions]="{standalone: true}">
+	  <br/>
+	  <app-email-element   [model]="options" placeholder="Your email"></app-email-element>
+	  <app-phone-element   [model]="options1" placeholder="Your email"></app-phone-element>
+	  <button type="submit"  (click)="getValue()" class="btn btn-secondary">
+	    Send
+	  </button>
+	</form>
 </div>
